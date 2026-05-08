@@ -3,9 +3,19 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
 
+    <!-- Login Colors -->
+    <color name="login_background">#F5F4FF</color>
+    <color name="login_primary">#534AB7</color>
+    <color name="login_text_secondary">#AFA9EC</color>
+    <color name="login_text_primary">#26215C</color>
+    <color name="login_accent">#7F77DD</color>
+    <color name="login_exit_bg">#FAECE7</color>
+    <color name="login_exit_text">#993C1D</color>
+    <color name="login_status_success">#1D9E75</color>
+
     <!-- Calculator Colors -->
     <color name="calc_background">#000000</color>
     <color name="calc_orange">#FF9F0A</color>
-    <color name="calc_grey">#A5A5A5</color>
+    <color name="calc_light_grey">#A5A5A5</color>
     <color name="calc_dark_grey">#333333</color>
 </resources>

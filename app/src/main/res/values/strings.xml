@@ -46,4 +46,9 @@
     <string name="str_login_role">Login Role</string>
     <string name="str_login_admin">Admin</string>
     <string name="str_login_employee">Employee</string>
+    <string name="str_signin_continue">Please sign in to continue</string>
+    <string name="str_remember_me">Remember Me</string>
+    <string name="str_forgot_password">Forgot Password?</string>
+    <string name="str_default_admin">admin</string>
+    <string name="str_default_pwd">123</string>
 </resources>

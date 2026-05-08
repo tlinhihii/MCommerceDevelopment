@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context=".LoginActivity"
-    android:background="#F5F4FF">
+    android:background="@color/login_background">
 
     <!-- Purple Header Banner -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:background="#534AB7"
+        android:background="@color/login_primary"
         android:padding="28dp"
         android:gravity="center">
 
@@ -24,16 +23,16 @@
             android:layout_height="wrap_content"
             android:text="@string/str_login_title"
             android:textAlignment="center"
-            android:textColor="#FFFFFF"
+            android:textColor="@color/white"
             android:textSize="24sp"
             android:textStyle="bold" />
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Please sign in to continue"
+            android:text="@string/str_signin_continue"
             android:textAlignment="center"
-            android:textColor="#AFA9EC"
+            android:textColor="@color/login_text_secondary"
             android:textSize="13sp"
             android:layout_marginTop="4dp" />
 
@@ -45,7 +44,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:padding="24dp"
-        android:background="#FFFFFF">
+        android:background="@color/white">
 
         <!-- Username Label -->
         <TextView
@@ -53,7 +52,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/str_username"
-            android:textColor="#534AB7"
+            android:textColor="@color/login_primary"
             android:textSize="12sp"
             android:textStyle="bold"
             android:letterSpacing="0.08" />
@@ -68,10 +67,11 @@
             android:ems="10"
             android:hint="@string/str_hint_username"
             android:inputType="text"
-            android:text="admin"
+            android:text="@string/str_default_admin"
+            android:autofillHints="username"
             android:padding="12dp"
-            android:textColor="#26215C"
-            android:textColorHint="#AFA9EC" />
+            android:textColor="@color/login_text_primary"
+            android:textColorHint="@color/login_text_secondary" />
 
         <!-- Password Label -->
         <TextView
@@ -79,7 +79,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/str_password"
-            android:textColor="#534AB7"
+            android:textColor="@color/login_primary"
             android:textSize="12sp"
             android:textStyle="bold"
             android:letterSpacing="0.08" />
@@ -94,10 +94,11 @@
             android:ems="10"
             android:hint="@string/str_hint_password"
             android:inputType="textPassword"
-            android:text="123"
+            android:text="@string/str_default_pwd"
+            android:autofillHints="password"
             android:padding="12dp"
-            android:textColor="#26215C"
-            android:textColorHint="#AFA9EC" />
+            android:textColor="@color/login_text_primary"
+            android:textColorHint="@color/login_text_secondary" />
 
         <!-- Role Label -->
         <TextView
@@ -105,7 +106,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/str_login_role"
-            android:textColor="#534AB7"
+            android:textColor="@color/login_primary"
             android:textSize="12sp"
             android:textStyle="bold"
             android:letterSpacing="0.08" />
@@ -125,8 +126,8 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/str_login_admin"
-                android:textColor="#534AB7"
-                android:buttonTint="#534AB7" />
+                android:textColor="@color/login_primary"
+                android:buttonTint="@color/login_primary" />
 
             <RadioButton
                 android:id="@+id/radEmployee"
@@ -134,46 +135,49 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:text="@string/str_login_employee"
-                android:textColor="#534AB7"
-                android:buttonTint="#534AB7" />
+                android:textColor="@color/login_primary"
+                android:buttonTint="@color/login_primary" />
 
         </RadioGroup>
 
         <!-- Remember Me / Forgot Password Row -->
-        <RelativeLayout
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp">
+            android:layout_marginBottom="20dp"
+            android:orientation="horizontal">
 
             <CheckBox
                 android:id="@+id/chkSaveInfo"
-                android:layout_width="wrap_content"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Remember Me"
-                android:textColor="#534AB7"
-                android:buttonTint="#534AB7" />
+                android:layout_weight="1"
+                android:text="@string/str_remember_me"
+                android:textColor="@color/login_primary"
+                android:buttonTint="@color/login_primary" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_centerVertical="true"
-                android:text="Forgot Password?"
-                android:textColor="#7F77DD"
+                android:layout_gravity="center_vertical"
+                android:text="@string/str_forgot_password"
+                android:textColor="@color/login_accent"
                 android:textStyle="bold"
                 android:textSize="13sp" />
 
-        </RelativeLayout>
+        </LinearLayout>
 
         <!-- Buttons -->
         <LinearLayout
+            style="?android:attr/buttonBarStyle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
             android:layout_marginBottom="12dp">
 
             <Button
+                style="?android:attr/buttonBarButtonStyle"
                 android:onClick="loginSystem"
                 android:id="@+id/btnLogin"
                 android:layout_width="0dp"
@@ -181,11 +185,12 @@
                 android:layout_weight="1"
                 android:layout_marginEnd="8dp"
                 android:text="@string/str_login"
-                android:backgroundTint="#534AB7"
-                android:textColor="#FFFFFF"
+                android:backgroundTint="@color/login_primary"
+                android:textColor="@color/white"
                 android:textStyle="bold" />
 
             <Button
+                style="?android:attr/buttonBarButtonStyle"
                 android:onClick="exitSystem"
                 android:id="@+id/btnExit"
                 android:layout_width="0dp"
@@ -193,8 +198,8 @@
                 android:layout_weight="1"
                 android:layout_marginStart="8dp"
                 android:text="@string/str_exit"
-                android:backgroundTint="#FAECE7"
-                android:textColor="#993C1D"
+                android:backgroundTint="@color/login_exit_bg"
+                android:textColor="@color/login_exit_text"
                 android:textStyle="bold" />
 
         </LinearLayout>
@@ -204,7 +209,7 @@
             android:id="@+id/txtMessage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:textColor="#1D9E75"
+            android:textColor="@color/login_status_success"
             android:textAlignment="center"
             android:textSize="13sp"
             android:textStyle="bold" />

@@ -69,6 +69,7 @@ public class LoginActivity extends AppCompatActivity {
                 if (radAdmin.isChecked())
                 {
                     Intent intent= new Intent(LoginActivity.this, MainActivity.class);
+                    startActivity(intent);
                 }
                 else {
                     Intent intent=new Intent(LoginActivity.this, EmployeeManagementActivity.class);
